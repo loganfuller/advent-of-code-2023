@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	f, err := os.Open("./input.txt")
+	f, err := os.Open("../input.txt")
 
 	if err != nil {
 		panic(err)
@@ -20,11 +20,8 @@ func main() {
 	scanner := bufio.NewScanner(f)
 
 	calibrationSum := 0
-	lineNum := 0
 
 	for scanner.Scan() {
-		lineNum++
-
 		calibrationLineSlice := strings.Split(scanner.Text(), "")
 
 		var calibrationValueSlice []string
